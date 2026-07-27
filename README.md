@@ -1,41 +1,43 @@
 # Saved For Now
 
-A private, two-person "read it later" feed. Email or paste a link (or just plain
-text — an excerpt, a quote, anything worth remembering) and it shows up as a
-scrollable, Instagram-style feed with link previews, tags, reactions, and notes.
-
-**Live:** [savedfornow.com](https://savedfornow.com) — login-gated (it's built for
-exactly two people), but the app is fully deployed and running.
-
-## Why I built this
-
-I wanted an alternative to endlessly scrolling X/Twitter — a way to actually go back
-to something I'd seen but didn't have time for in the moment, instead of it just
-disappearing into the feed. That's not limited to tweets, though — it's just as
-much for articles, PDFs, videos, or a quote I want to remember, anything that
-would otherwise get lost. My dad and I also share links like this constantly over
-text and email, and there was never one place to keep track of what we'd sent
-each other or say what we thought of it. This is that place: email or paste
-something in — a link or just plain text — and it's there later, with room for
+A private, two-person "read it later" feed — email or paste something in (a
+link, a PDF, a tweet, or just plain text) and it's there later, with room for
 both of us to react to it independently.
 
-## What it does
+**Live:** [savedfornow.com](https://savedfornow.com) (login-gated — built for
+exactly two people, but fully deployed and running)
 
-- **Email-in ingestion** — send a link to a dedicated inbox address and it's parsed,
-  enriched, and added to the feed automatically, attributed to whoever sent it.
-- **Rich link previews** — fetches title, image, and site name for any URL. Handles
-  sites that block server-side scraping (YouTube, X/Twitter) via their official
-  oEmbed APIs instead, and extracts titles from PDFs directly (falling back to
-  guessing from the document's opening lines when the PDF has no metadata title set).
-- **Two independent perspectives on shared content** — tags, reactions, and
-  "consumed" status are all per-person, so two people can each have their own take
-  on the same saved item, while comments are shared and visible to both.
-- **A real archive** — once you've consumed something, it moves out of the main
-  feed into a searchable archive of everything you've gotten through.
-- **Plain-text saves** — not everything worth saving is a URL. Paste any text and
-  it's stored as its own item, same tagging/reaction/archive behavior as a link.
+I wanted an alternative to losing things scrolled past on X/Twitter, and a
+shared place for the articles/links my dad and I are always sending each
+other over text and email — somewhere to keep track of what we've shared and
+say what we thought of it.
 
-## How it's built
+## How it works
+
+**1. Save something** — email a link to a dedicated inbox, or paste it (or
+any text) straight into the site.
+
+![Paste box](docs/screenshot-save.png)
+
+**2. It shows up with a real preview** — title, image, and site name fetched
+automatically, including for sites that block plain scraping (YouTube,
+X/Twitter via their oEmbed APIs) and PDFs (title pulled from document
+metadata, or guessed from the opening lines if there isn't one).
+
+![Feed](docs/screenshot-feed.png)
+
+**3. React, tag, and comment** — independently. Two people can each have
+their own tags/reaction/read-status on the same shared item, while comments
+are visible to both.
+
+![Item card](docs/screenshot-card.png)
+
+**4. Mark it consumed** — it drops out of your feed and into your own
+searchable archive.
+
+![Archive](docs/screenshot-archive.png)
+
+## Under the hood
 
 ```
 Email → Cloudflare Email Routing → Cloudflare Worker (parses MIME, extracts
@@ -46,16 +48,13 @@ Paste box ───┘
 ```
 
 - **Auth** is deliberately minimal: two known people, two passwords, a signed
-  JWT session cookie — no accounts system, because there will only ever be two
-  users.
-- **Data model** separates shared content (`items`: the URL/text, title, image)
-  from per-person state (`item_interactions`: tags, reaction, comment, consumed),
-  so two people can independently interact with one shared row.
+  JWT cookie — no accounts system, since there will only ever be two users.
+- **Data model** separates shared content (`items`: the URL/text, title,
+  image) from per-person state (`item_interactions`: tags, reaction, comment,
+  consumed), so two people independently interact with one shared row.
 
-## Stack
-
-Next.js (App Router) · TypeScript · Tailwind CSS · Drizzle ORM · Neon (serverless
-Postgres) · Cloudflare Workers + Email Routing · Vercel
+**Stack:** Next.js (App Router) · TypeScript · Tailwind · Drizzle ORM · Neon ·
+Cloudflare Workers + Email Routing · Vercel
 
 ## Local development
 
@@ -66,5 +65,6 @@ npm run db:push                    # push the schema to your database
 npm run dev
 ```
 
-The email-ingest path (`cloudflare-worker/`) is a separate small project — see its
-`wrangler.toml` for the Worker config, deployed independently via `wrangler deploy`.
+The email-ingest path (`cloudflare-worker/`) is a separate small project — see
+its `wrangler.toml` for the Worker config, deployed independently via
+`wrangler deploy`.
