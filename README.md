@@ -5,14 +5,13 @@ a tweet, or just plain text) and it's there later, ready to go through when
 you actually have time for it.
 
 **Live:** [savedfornow.com](https://savedfornow.com) (login-gated — built for,
-and currently used by, myself and my dad, but fully deployed and running)
+and currently used by, myself and my dad)
 
-I wanted an alternative to losing things scrolled past on X/Twitter or
-elsewhere, and a shared place for the articles/links my dad and I are always
-sending each other over text and email — somewhere to keep track of what
-we'd shared and say what we thought of it. Instead of doomscrolling on my
-commute or whenever I have a spare moment, I can go through a feed of things
-I've actually been meaning to get back to.
+I wanted an alternative to losing things scrolled past on X or elsewhere, and
+a shared place for the articles/links my dad and I are always sending each
+other over text and email — somewhere to keep track of what we'd shared and
+say what we thought of it. Instead of doomscrolling on my commute, I can now
+go through a feed of things I've actually been meaning to get back to!
 
 ## How it works
 
