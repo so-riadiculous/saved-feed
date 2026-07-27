@@ -19,20 +19,15 @@ any text) straight into the site.
 
 ![Paste box](docs/screenshot-save.png)
 
-**2. It shows up with a real preview** — title, image, and site name fetched
-automatically, including for sites that block plain scraping (YouTube,
-X/Twitter via their oEmbed APIs) and PDFs (title pulled from document
-metadata, or guessed from the opening lines if there isn't one).
+**2. It shows up with a real preview, ready to react to** — title, image, and
+site name fetched automatically (including for sites that block plain
+scraping, like YouTube and X/Twitter, via their oEmbed APIs, and PDFs via
+their metadata). Two people can each have their own tags/reaction/read-status
+on the same shared item, while comments are visible to both.
 
 ![Feed](docs/screenshot-feed.png)
 
-**3. React, tag, and comment** — independently. Two people can each have
-their own tags/reaction/read-status on the same shared item, while comments
-are visible to both.
-
-![Item card](docs/screenshot-card.png)
-
-**4. Mark it consumed** — it drops out of your feed and into your own
+**3. Mark it consumed** — it drops out of your feed and into your own
 searchable archive.
 
 ![Archive](docs/screenshot-archive.png)
