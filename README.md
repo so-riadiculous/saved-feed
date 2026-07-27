@@ -7,14 +7,12 @@ you actually have time for it.
 **Live:** [savedfornow.com](https://savedfornow.com) (login-gated — built for,
 and currently used by, myself and my dad, but fully deployed and running)
 
-Instead of doomscrolling social media on my commute or whenever I have a
-spare moment, I wanted to go through a feed of content I'd been meaning to
-get back to instead — and not just tweets, anything I want to consume later.
-My dad and I also send each other articles and links constantly over text
-and email, and there was never one place to keep track of what we'd shared
-or say what we thought of it. This is that place: email or paste something
-in, and it's there later, with room for each person to react to it
-independently.
+I wanted an alternative to losing things scrolled past on X/Twitter or
+elsewhere, and a shared place for the articles/links my dad and I are always
+sending each other over text and email — somewhere to keep track of what
+we'd shared and say what we thought of it. Instead of doomscrolling on my
+commute or whenever I have a spare moment, I can go through a feed of things
+I've actually been meaning to get back to.
 
 ## How it works
 
