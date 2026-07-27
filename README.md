@@ -1,16 +1,20 @@
 # Saved For Now
 
-A private, two-person "read it later" feed — email or paste something in (a
-link, a PDF, a tweet, or just plain text) and it's there later, with room for
-both of us to react to it independently.
+A private "read it later" feed — email or paste something in (a link, a PDF,
+a tweet, or just plain text) and it's there later, ready to go through when
+you actually have time for it.
 
-**Live:** [savedfornow.com](https://savedfornow.com) (login-gated — built for
-exactly two people, but fully deployed and running)
+**Live:** [savedfornow.com](https://savedfornow.com) (login-gated — built for,
+and currently used by, myself and my dad, but fully deployed and running)
 
-I wanted an alternative to losing things scrolled past on X/Twitter, and a
-shared place for the articles/links my dad and I are always sending each
-other over text and email — somewhere to keep track of what we've shared and
-say what we thought of it.
+Instead of doomscrolling social media on my commute or whenever I have a
+spare moment, I wanted to go through a feed of content I'd been meaning to
+get back to instead — and not just tweets, anything I want to consume later.
+My dad and I also send each other articles and links constantly over text
+and email, and there was never one place to keep track of what we'd shared
+or say what we thought of it. This is that place: email or paste something
+in, and it's there later, with room for each person to react to it
+independently.
 
 ## How it works
 
@@ -22,8 +26,8 @@ any text) straight into the site.
 **2. It shows up with a real preview, ready to react to** — title, image, and
 site name fetched automatically (including for sites that block plain
 scraping, like YouTube and X/Twitter, via their oEmbed APIs, and PDFs via
-their metadata). Two people can each have their own tags/reaction/read-status
-on the same shared item, while comments are visible to both.
+their metadata). Each person has their own tags/reaction/read-status on the
+same shared item, while comments are shared and visible to everyone.
 
 ![Feed](docs/screenshot-feed.png)
 
