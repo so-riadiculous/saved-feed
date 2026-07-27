@@ -91,7 +91,11 @@ so the feed can be filled by hand from day one.
   each push needs `export GH_TOKEN="..."` inline in the same Bash call right before
   `git push` (confirmed working repeatedly; a plain `git push` alone hangs on Git
   Credential Manager here).
-- GitHub account: `so-riadiculous`. Repo: `so-riadiculous/saved-feed` (private).
+- GitHub account: `so-riadiculous`. Repo: `so-riadiculous/saved-for-later-feed`
+  (public — made public and squashed to a single clean commit for use as a
+  portfolio piece in job applications; renamed from `saved-feed`). Vercel
+  project and Cloudflare Worker names are unaffected by the repo rename (still
+  `saved-feed` / `saved-feed-inbound`).
 - **PowerShell piping secrets into a subprocess's stdin silently corrupts them** —
   hit this with `vercel env add` reading from a piped string: passwords gained a
   trailing `\r`, and one value gained a leading UTF-8 BOM (`ï»¿`). Symptom was
